@@ -1,0 +1,22 @@
+﻿<Window x:Class="CuadrosTexto.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CuadrosTexto"
+        mc:Ignorable="d"
+        Icon="assets/monitor_window.ico"
+        Title="2.8.CuadrosTexto" Height="300" Width="350">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="31,35,0,0" TextWrapping="Wrap" Text="Nombre" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="31,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" KeyDown="TextBox_KeyUp"/>
+        <TextBlock HorizontalAlignment="Left" Margin="31,108,0,0" TextWrapping="Wrap" Text="Apellido" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="31,129,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" KeyDown="TextBox_KeyUp"/>
+        <TextBlock HorizontalAlignment="Left" Margin="31,190,0,0" TextWrapping="Wrap" Text="Edad" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="31,211,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="MensajeNombreTextBlock" HorizontalAlignment="Left" Margin="172,63,0,0" TextWrapping="Wrap" Text="Nombre del cliente" VerticalAlignment="Top"/>
+        <TextBlock x:Name="MensajeApellidoTextBlock" HorizontalAlignment="Left" Margin="172,129,0,0" TextWrapping="Wrap" Text="apellido del cliente" VerticalAlignment="Top"/>
+        <TextBlock x:Name="MensajeEdadTextBlock" HorizontalAlignment="Left" Margin="165,211,0,0" TextWrapping="Wrap" Text="Edad incorrecta" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
