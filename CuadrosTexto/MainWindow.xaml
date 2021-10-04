@@ -9,14 +9,14 @@
         Title="2.8.CuadrosTexto" Height="300" Width="350">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="31,35,0,0" TextWrapping="Wrap" Text="Nombre" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="31,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" KeyDown="TextBox_KeyUp"/>
+        <TextBox Tag="nombre" HorizontalAlignment="Left" Height="23" Margin="31,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" KeyDown="TextBox_KeyUp"/>
         <TextBlock HorizontalAlignment="Left" Margin="31,108,0,0" TextWrapping="Wrap" Text="Apellido" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="31,129,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" KeyDown="TextBox_KeyUp"/>
+        <TextBox Tag="apellido" HorizontalAlignment="Left" Height="23" Margin="31,129,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" KeyDown="TextBox_KeyUp"/>
         <TextBlock HorizontalAlignment="Left" Margin="31,190,0,0" TextWrapping="Wrap" Text="Edad" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="31,211,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBlock x:Name="MensajeNombreTextBlock" HorizontalAlignment="Left" Margin="172,63,0,0" TextWrapping="Wrap" Text="Nombre del cliente" VerticalAlignment="Top"/>
-        <TextBlock x:Name="MensajeApellidoTextBlock" HorizontalAlignment="Left" Margin="172,129,0,0" TextWrapping="Wrap" Text="apellido del cliente" VerticalAlignment="Top"/>
-        <TextBlock x:Name="MensajeEdadTextBlock" HorizontalAlignment="Left" Margin="165,211,0,0" TextWrapping="Wrap" Text="Edad incorrecta" VerticalAlignment="Top"/>
+        <TextBox x:Name="EdadTextBox" HorizontalAlignment="Left" Height="23" Margin="31,211,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" KeyUp="EdadTextBox_KeyUp"/>
+        <TextBlock x:Name="MensajeNombreTextBlock" Visibility="Hidden" HorizontalAlignment="Left" Margin="172,63,0,0" TextWrapping="Wrap" Text="Nombre del cliente" VerticalAlignment="Top"/>
+        <TextBlock x:Name="MensajeApellidoTextBlock" Visibility="Hidden" HorizontalAlignment="Left" Margin="172,129,0,0" TextWrapping="Wrap" Text="apellido del cliente" VerticalAlignment="Top"/>
+        <TextBlock x:Name="MensajeEdadTextBlock" Visibility="Hidden" HorizontalAlignment="Left" Margin="165,211,0,0" TextWrapping="Wrap" Text="Edad incorrecta" VerticalAlignment="Top" Foreground="#FFDE1717"/>
 
     </Grid>
 </Window>

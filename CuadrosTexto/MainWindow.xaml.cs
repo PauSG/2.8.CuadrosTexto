@@ -27,24 +27,44 @@ namespace CuadrosTexto
             MensajeApellidoTextBlock.Tag = "apellido";
             MensajeEdadTextBlock.Tag = "edad";
         }
-        int i = 2;
         private void TextBox_KeyUp(object sender, KeyEventArgs e)
         {
             TextBox item = (TextBox)sender;
-            
-            if(e.Key == Key.F1)
+
+            if (e.Key == Key.F1)
             {
-                if(i%2 == 0)
-                    {
-                        item.Visibility = Visibility.Visible;
-                    i++;
-                    }
-                else
+                switch (item.Tag.ToString())
                 {
-                    item.Visibility = Visibility.Hidden;
-                    i++;
+                    case "nombre":
+                        MensajeNombreTextBlock.Visibility = MensajeNombreTextBlock.Visibility == Visibility.Visible ? Visibility.Hidden : Visibility.Visible;
+                        break;
+                    case "apellido":
+                        MensajeApellidoTextBlock.Visibility = MensajeApellidoTextBlock.Visibility == Visibility.Visible ? Visibility.Hidden : Visibility.Visible;
+                        break;
                 }
-                
+            }
+        }
+
+        private void EdadTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+
+            if (e.Key == Key.F2)
+            {
+                try
+                {
+                    if (int.Parse(EdadTextBox.Text) > 0 && int.Parse(EdadTextBox.Text) <= 100)
+                    {
+                        MensajeEdadTextBlock.Visibility = Visibility.Hidden;
+                    }
+                    else
+                    {
+                        MensajeEdadTextBlock.Visibility = Visibility.Visible;
+                    }
+                }
+                catch (FormatException)
+                {
+                    MensajeEdadTextBlock.Visibility = Visibility.Visible;
+                }
             }
         }
     }
