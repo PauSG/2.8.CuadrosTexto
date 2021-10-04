@@ -50,20 +50,16 @@ namespace CuadrosTexto
 
             if (e.Key == Key.F2)
             {
+                
                 try
                 {
-                    if (int.Parse(EdadTextBox.Text) > 0 && int.Parse(EdadTextBox.Text) <= 100)
-                    {
-                        MensajeEdadTextBlock.Visibility = Visibility.Hidden;
-                    }
-                    else
-                    {
-                        MensajeEdadTextBlock.Visibility = Visibility.Visible;
-                    }
+                    int.Parse(EdadTextBox.Text);
+                    MensajeEdadTextBlock.Visibility = Visibility.Hidden;
                 }
                 catch (FormatException)
                 {
                     MensajeEdadTextBlock.Visibility = Visibility.Visible;
+                    Console.WriteLine("Deben ser digitos");
                 }
             }
         }
